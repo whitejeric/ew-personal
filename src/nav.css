@@ -1,0 +1,41 @@
+.nav {
+	background-color: var(--nav-background);
+	backdrop-filter: blur(2px);
+	display: flex;
+	width: 100%;
+	flex-direction: row;
+	border-bottom: 1px solid var(--border-color);
+	z-index: 10;
+	/* position: fixed; */
+}
+.nav-section {
+	padding: 3rem 2rem;
+	display: flex;
+	gap: 1rem;
+	border-left: 1px solid var(--border-color);
+}
+
+.nav-section:nth-child(1),
+.nav-section:nth-child(2) {
+	flex-basis: calc(100% / 3);
+}
+
+.nav-section:nth-child(3),
+.nav-section:nth-child(4) {
+	flex-grow: 1;
+}
+
+#nav-logo {
+	background-color: var(--nav-background);
+}
+
+#nav-links {
+	background-color: var(--nav-background);
+}
+
+#nav-socials {
+	background-color: var(--nav-background);
+}
+#nav-contact {
+	background-color: var(--nav-background);
+}

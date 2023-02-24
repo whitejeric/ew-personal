@@ -1,0 +1,26 @@
+:root {
+	--background-color: rgb(84, 152, 211);
+	--border-color: rgb(207, 223, 236, 0.1);
+	--nav-background: rgba(84, 152, 211, 0.5);
+}
+* {
+	box-sizing: border-box;
+}
+body {
+	height: 100vh;
+	background-color: var(--background-color);
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+}
+
+a {
+	text-decoration: none;
+}
+
+.content-grid {
+	display: grid;
+	z-index: 1;
+	flex-grow: 1;
+}
