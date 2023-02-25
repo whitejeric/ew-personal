@@ -12,24 +12,22 @@ const subApps = [
 ];
 
 //keep track of which module is loaded across App
-function reducer(state, action) {
+function globalReducer(state, action) {
 	if (action.type === 'changePage') {
 		console.log(state, action);
 		return {
-			age: state.age + 1,
 			page: action.payload,
 			module: action.module,
 		};
 	}
 	return {
-		age: 0,
 		page: 'home',
 		module: EW,
 	};
 }
 
 function App() {
-	const [state, dispatch] = useReducer(reducer, {
+	const [state, dispatch] = useReducer(globalReducer, {
 		age: 42,
 		page: 'home',
 		module: EW,

@@ -1,11 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100;300&family=Roboto+Mono:ital,wght@1,200&display=swap');
 :root {
-	--background-color: rgb(84, 152, 211);
+	--background-color: rgb(51, 53, 54);
 	--border-color: rgb(207, 223, 236, 0.1);
-	--nav-background: rgba(84, 152, 211, 0.5);
+	--nav-background: rgba(78, 95, 112, 0.3);
+	--nav-hover: rgba(7, 19, 31, 0.2);
+	--text-size: 1.2em;
+	--text-color: aliceblue;
+	--link-color: rgb(144, 147, 150);
+	font-family: 'IBM Plex Sans', sans-serif;
+	color: aliceblue;
 }
 * {
 	box-sizing: border-box;
 }
+
 body {
 	height: 100vh;
 	background-color: var(--background-color);
@@ -13,10 +21,6 @@ body {
 	display: flex;
 	flex-direction: column;
 	overflow: hidden;
-}
-
-a {
-	text-decoration: none;
 }
 
 .content-grid {
