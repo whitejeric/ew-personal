@@ -1,19 +1,19 @@
 .nav {
-	background-color: var(--nav-background);
-	backdrop-filter: blur(2px);
+	background-image: linear-gradient(rgb(0, 0, 0, 0.1), var(--nav-background));
+	backdrop-filter: blur(6px);
 	display: flex;
 	width: 100%;
 	flex-direction: row;
-	border-bottom: 1px solid var(--border-color);
+	/* border-bottom: 1px solid var(--border-color); */
 	z-index: 10;
-	/* position: fixed; */
+	position: fixed;
 }
 .nav-section {
 	padding: 2rem 2rem;
 	display: flex;
 	flex-direction: row;
 	gap: 1rem;
-	border-left: 1px solid var(--border-color);
+	/* border-left: 1px solid var(--border-color); */
 	transition: background-color 350ms ease;
 	justify-content: center;
 }
@@ -41,7 +41,6 @@ svg:hover {
 .nav-section:first-child {
 	justify-content: left;
 	flex-basis: calc(100% / 3);
-	padding-left: 1rem;
 }
 
 .nav-section:nth-child(2) {
@@ -55,5 +54,5 @@ svg:hover {
 }
 
 .nav-section:hover {
-	background-color: var(--nav-hover);
+	background-color: rgb(0, 0, 0, 0.05);
 }

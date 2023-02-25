@@ -9,7 +9,7 @@ const Nav = ({ navigate, items }) => {
 						navigate({ type: '#', payload: 'logo' });
 					}}
 				>
-					EW
+					ew
 				</a>
 			</div>
 			<div id={'nav-links'} className="nav-section">

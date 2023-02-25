@@ -1,22 +1,26 @@
 import { useReducer } from 'react';
-import AA from './AA';
+import About from './About';
 import reactLogo from './assets/react.svg';
 import BB from './BB';
 import Content from './Content';
 import EW from './EW';
 import Nav from './Nav';
+import WebTemplate from './WebTemplate';
 
 const subApps = [
-	{ name: 'App A', module: AA },
-	{ name: 'App B', module: BB },
+	{ name: 'web template', module: WebTemplate },
+	{ name: 'about', module: About },
+	{ name: 'app B', module: BB },
 ];
 
 //keep track of which module is loaded across App
 function globalReducer(state, action) {
 	if (action.type === 'changePage') {
+		const old_module = state.module;
 		console.log(state, action);
 		return {
 			page: action.payload,
+			pastModule: old_module,
 			module: action.module,
 		};
 	}
@@ -31,12 +35,17 @@ function App() {
 		age: 42,
 		page: 'home',
 		module: EW,
+		pastModule: EW,
 	});
 
 	return (
 		<div className="App">
 			<Nav navigate={dispatch} items={subApps} />
-			<Content current={state.page} Module={state.module} />
+			<Content
+				current={state.page}
+				PastModule={state.pastModule}
+				Module={state.module}
+			/>
 		</div>
 	);
 }

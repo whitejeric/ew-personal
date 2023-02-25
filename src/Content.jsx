@@ -1,17 +1,10 @@
 import React, { useEffect } from 'react';
-const Content = ({ current, Module }) => {
-	useEffect(() => {
-		console.log(current);
-	});
+const Content = ({ PastModule, Module }) => {
 	return (
-		<div className="content">
-			{current}
-			<Module key={current} />
-			<article></article>
-			<article></article>
-			<article></article>
-			<article></article>
-		</div>
+		<>
+			<Module />
+			{/* <PastModule fade={true} /> */}
+		</>
 	);
 };
 
