@@ -35,7 +35,7 @@ function BlowUpGrid({ parentID = false }) {
 			setTotal(newColumns * newRows);
 			anime({
 				targets: '.bu-grid-item',
-				backgroundColor: color.current,
+				backgroundColor: 'rgb(31, 32, 32)',
 				duration: 0,
 				easing: 'linear',
 			});
