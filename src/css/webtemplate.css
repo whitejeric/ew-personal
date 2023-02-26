@@ -11,6 +11,7 @@
 
 .wt-grid > .content-card {
 	height: 100%;
+	width: auto;
 	border: 1px solid var(--border-color);
 }
 

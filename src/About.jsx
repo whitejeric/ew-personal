@@ -22,7 +22,7 @@ const About = ({ fade }) => {
 					frameworks
 				</div>
 				<div id={'abt-frameworks'} className="abt-card">
-					frameworks
+					frame
 				</div>
 				<div id={'abt-frameworks'} className="abt-card">
 					frameworks

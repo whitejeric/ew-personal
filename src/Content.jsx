@@ -9,3 +9,4 @@ const Content = ({ PastModule, Module }) => {
 };
 
 export default Content;
+/*finish fade*/
