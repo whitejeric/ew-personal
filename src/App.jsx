@@ -2,15 +2,18 @@ import { useReducer } from 'react';
 import About from './About';
 import reactLogo from './assets/react.svg';
 import BB from './BB';
+import BlowUpGrid from './BlowUpGrid';
 import Content from './Content';
 import EW from './EW';
 import Nav from './Nav';
+import Rainbow from './Rainbow';
 import WebTemplate from './WebTemplate';
 
 const subApps = [
-	{ name: 'web template', module: WebTemplate },
+	{ name: 'web template', module: WebTemplate, props: { id: 'wtmp' } },
 	{ name: 'about', module: About },
-	{ name: 'app B', module: BB },
+	{ name: 'blow up', module: BlowUpGrid },
+	{ name: 'rainbow', module: Rainbow, props: { id: 'rain' } },
 ];
 
 //keep track of which module is loaded across App
@@ -20,8 +23,8 @@ function globalReducer(state, action) {
 		console.log(state, action);
 		return {
 			page: action.payload,
-			pastModule: old_module,
 			module: action.module,
+			props: action.props,
 		};
 	}
 	return {
@@ -32,20 +35,15 @@ function globalReducer(state, action) {
 
 function App() {
 	const [state, dispatch] = useReducer(globalReducer, {
-		age: 42,
 		page: 'home',
 		module: EW,
-		pastModule: EW,
+		props: { id: 'ew' },
 	});
 
 	return (
 		<div className="App">
 			<Nav navigate={dispatch} items={subApps} />
-			<Content
-				current={state.page}
-				PastModule={state.pastModule}
-				Module={state.module}
-			/>
+			<Content current={state.page} Module={state.module} props={state.props} />
 		</div>
 	);
 }

@@ -23,6 +23,7 @@ const Nav = ({ navigate, items }) => {
 										type: 'changePage',
 										payload: e.name,
 										module: e.module,
+										props: e.props,
 									});
 								}}
 							>

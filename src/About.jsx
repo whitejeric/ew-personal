@@ -1,4 +1,5 @@
 import React from 'react';
+import BlowUpGrid from './BlowUpGrid';
 
 const About = ({ fade }) => {
 	const fade_flag = fade ? '-fade' : '';
@@ -10,7 +11,7 @@ const About = ({ fade }) => {
 					hello
 				</div>
 				<div id={'abt-splash-image'} className="abt-card">
-					splash-image
+					<BlowUpGrid parentID={'abt-splash-image'} />
 				</div>
 				<div id={'abt-blurb'} className="abt-card">
 					blurb

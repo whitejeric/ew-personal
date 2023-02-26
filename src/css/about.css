@@ -37,6 +37,8 @@
 }
 
 #abt-splash-image {
-	grid-column: span 2 / auto;
+	align-items: baseline;
+	justify-content: flex-start;
+	grid-column: span 2 / 5;
 	grid-row: span 2;
 }

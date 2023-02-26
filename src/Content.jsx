@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-const Content = ({ PastModule, Module }) => {
+const Content = ({ PastModule, Module, props }) => {
 	return (
 		<>
 			<Module />
