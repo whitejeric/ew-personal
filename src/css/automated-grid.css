@@ -1,17 +1,21 @@
 .automated-blow-up {
 	z-index: -1;
 	margin: 0;
-	width: 100%;
+	margin-left: -3.5px;
+
+	width: 101%;
 	height: 100vh;
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
 	align-items: center;
 	background-color: var(--item-color);
+	opacity: 0.2;
+	position: absolute;
 }
 
 #automated-grid {
-	width: 100%;
+	width: 110%;
 	height: 100%;
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
@@ -23,12 +27,12 @@
 .automated-grid-item {
 	min-width: 100%;
 	min-height: 100%;
-	grid-row: span(3)
+	/* grid-row: span(3); */
 	background-color: var(--item-color);
 	/* border: 0.1px solid rgba(255, 255, 255, 1); */
 	position: relative;
 	/* border-radius: 30%; */
-	transform: rotateX('90deg');
+	transform: opacity(0.1);
 }
 
 .automated-grid-item:after {
@@ -39,5 +43,5 @@
 	left: 0;
 	top: 0;
 	display: block;
-	transition: transform rotateX('90deg') ease 100ms;
+	transition: transform opacity(1) ease 100ms;
 }

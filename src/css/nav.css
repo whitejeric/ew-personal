@@ -1,10 +1,10 @@
 .nav {
-	background-image: linear-gradient(rgb(0, 0, 0, 0.1), var(--nav-background));
+	background-color: var(--nav-background);
 	backdrop-filter: blur(6px);
 	display: flex;
 	width: 100%;
 	flex-direction: row;
-	/* border-bottom: 1px solid var(--border-color); */
+	border-bottom: 1px solid var(--border-color);
 	z-index: 10;
 	position: fixed;
 }

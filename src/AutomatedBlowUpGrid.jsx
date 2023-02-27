@@ -16,25 +16,25 @@ import './css/automated-grid.css';
  *                                              at which the grid items should
  *                                              animate.
  */
-function AutomatedBlowUpGrid({ parentID = false, interval = 500 }) {
+function AutomatedBlowUpGrid({ parentID = false, interval = 15000 }) {
 	const [columns, setColumns] = useState(0);
 	const [rows, setRows] = useState(0);
 	const [total, setTotal] = useState(1);
 	const [direction, setDirection] = useState(true);
 	const color = useRef('rgb(31, 32, 32)');
-	const [next_color, setColor] = useState();
+	const [didLoad, setLoad] = useState(false);
 
 	useEffect(() => {
 		//Calculates and sets the number of columns and rows based on window size.
 		function handleResize() {
 			const newColumns = Math.floor(
 				parentID
-					? (document.getElementById(parentID).clientWidth * 100) / 50
+					? (document.getElementById(parentID).clientWidth * 100) / 49
 					: document.body.clientWidth / 50
 			);
 			const newRows = Math.floor(
 				parentID
-					? (document.getElementById(parentID).clientHeight * 100) / 50
+					? (document.getElementById(parentID).clientHeight * 100) / 49
 					: document.body.clientHeight / 50
 			);
 			setColumns(newColumns);
@@ -48,13 +48,19 @@ function AutomatedBlowUpGrid({ parentID = false, interval = 500 }) {
 			});
 		}
 		handleResize();
+		setLoad(true);
 		window.addEventListener('resize', handleResize);
-
 		return () => {
 			window.removeEventListener('resize', handleResize);
 			// clearInterval(intervalID);
 		};
 	}, []);
+
+	useEffect(() => {
+		if (didLoad) {
+			handleStagger(Math.floor(total / 2));
+		}
+	}, [didLoad]);
 
 	useEffect(() => {
 		const intervalID = setInterval(() => {
@@ -65,7 +71,7 @@ function AutomatedBlowUpGrid({ parentID = false, interval = 500 }) {
 			clearInterval(intervalID);
 		};
 	}),
-		[];
+		[]; // ? removing this typo causes the module to not work
 
 	/**
 	 * Changes the color of the specified grid item to a random color and then
@@ -80,9 +86,10 @@ function AutomatedBlowUpGrid({ parentID = false, interval = 500 }) {
 			targets: '.automated-grid-item',
 			backgroundColor: color.current,
 
-			translateX: direction ? -70 : 70,
+			translateX: direction ? -7 : 0,
+			translateY: direction ? -7 : 0,
 
-			delay: anime.stagger(50, { grid: [columns, rows], from: cellId }),
+			delay: anime.stagger(100, { grid: [columns, rows], from: cellId }),
 		});
 		setDirection(!direction);
 	}

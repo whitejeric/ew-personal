@@ -2,11 +2,11 @@
 :root {
 	--background-color: rgb(31, 32, 32);
 	--border-color: rgb(187, 174, 174, 0.04);
-	--nav-background: rgba(78, 95, 112, 0.1);
+	--nav-background: rgba(78, 95, 112, 0.4);
 	--nav-hover: rgba(7, 19, 31, 0.2);
 	--text-size: 1.2em;
 	--text-color: aliceblue;
-	--link-color: rgb(144, 147, 150);
+	--link-color: rgb(213, 217, 221);
 	font-family: 'IBM Plex Sans', sans-serif;
 	color: aliceblue;
 }
