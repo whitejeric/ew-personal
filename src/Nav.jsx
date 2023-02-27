@@ -69,7 +69,17 @@ const Nav = ({ navigate, items }) => {
 				</a>
 			</div>
 			<div id={'nav-contact'} className="nav-section">
-				<a href="#">contact me</a>
+				<a
+					href="#"
+					onClick={() => {
+						navigate({
+							type: 'openContact',
+							payload: true,
+						});
+					}}
+				>
+					contact me
+				</a>
 			</div>
 		</div>
 	);

@@ -1,4 +1,5 @@
 .blow-up {
+	z-index: -1;
 	margin: 0;
 	width: 100vw;
 	height: 100vh;
@@ -7,6 +8,7 @@
 	align-items: center;
 }
 .blow-up-module {
+	z-index: -1;
 	margin: 0;
 	width: 100%;
 	height: 100%;
@@ -15,6 +17,7 @@
 	align-items: center;
 }
 #bu-grid {
+	z-index: 1;
 	width: 100%;
 	height: 100%;
 	display: grid;
