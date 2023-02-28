@@ -18,7 +18,7 @@ function BlowUpGrid({ parentID = false }) {
 	const color = useRef('rgb(31, 32, 32)');
 
 	useEffect(() => {
-		//Calculates and sets the number of columns and rows based on window size.
+		//Calculates and sets the number of columns and rows based on the window size.
 		function handleResize() {
 			const newColumns = Math.floor(
 				parentID

@@ -8,8 +8,6 @@ function Contact({ visible }) {
 	const handleSubmit = (event) => {
 		event.preventDefault();
 		console.log('Submitted:', { name, email, message });
-		// You can replace the console.log statement with your own form submission logic
-		// using a library like Axios or the native Fetch API
 	};
 
 	return visible ? (
