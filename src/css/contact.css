@@ -1,7 +1,7 @@
 .contact-pop-up {
 	position: absolute;
 	display: flex;
-	z-index: 2;
+	z-index: 3;
 	margin-left: calc(100% / 3);
 	height: 40vh;
 	width: calc(100% / 3);

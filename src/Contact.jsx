@@ -7,7 +7,7 @@ function Contact({ visible }) {
 
 	const handleSubmit = (event) => {
 		event.preventDefault();
-		console.log('Submitted:', { name, email, message });
+		console.log('Submit:', { name, email, message });
 	};
 
 	return visible ? (
