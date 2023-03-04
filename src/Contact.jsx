@@ -23,7 +23,7 @@ function Contact({ visible }) {
 					/>
 				</label>
 				<label>
-					Email:
+					Email
 					<input
 						type="email"
 						value={email}
