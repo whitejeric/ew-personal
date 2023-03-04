@@ -37,7 +37,7 @@ function Contact({ visible }) {
 						onChange={(e) => setMessage(e.target.value)}
 					/>
 				</label>
-				<button type="submit">Submit</button>
+				<button type="submit">Subbmit</button>
 			</form>
 		</div>
 	) : null;
